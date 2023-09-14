@@ -16,12 +16,12 @@ services:
       - drupal-sites:/var/www/html/sites      
       - drupal-themes:/var/www/html/themes
  
-  postgres:
-    image: postgres:14
+  mariadb:
+    image: mariadb:latest
     environment:
-      - POSTGRES_PASSWORD=mypasswd
+      - MYSQL_ROOT_PASSWORD=mypasswd
     volumes:
-      - drupal-data:/var/lib/postgresql/data
+      - drupal-data:/var/lib/mysql
 
 volumes:
   drupal-data:
