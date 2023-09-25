@@ -11,3 +11,10 @@ RUN git clone --branch 8.x-4.x --single-branch --depth 1 https://git.drupalcode.
     && chown -R www-data:www-data bootstrap
 
 WORKDIR /var/www/html
+
+
+#The subsequent chown -R www-data:www-data bootstrap command changes the ownership of this bootstrap directory and its contents to the www-data user and group, which is typically used by web servers to access and serve files.
+
+
+
+
